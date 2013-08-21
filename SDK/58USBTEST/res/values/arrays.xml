@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="baudrate">
+        <item >9600</item>
+        <item >19200</item>
+        <item >38400</item>
+        <item >57600</item>
+        <item >115200</item>
+    </string-array>
+    <string-array name="stopbits">
+        <item >1</item>
+        <item >1.5</item>
+        <item >2</item>
+    </string-array>
+    <string-array name="databits">
+        <item >5</item>
+        <item >6</item>
+        <item >7</item>
+        <item >8</item>
+    </string-array>
+    <string-array name="parity">
+        <item >NONE</item>
+        <item >ODD</item>
+        <item >EVEN</item>
+    </string-array>
+    <string-array name="flowcontrol">
+        <item >OFF</item>
+        <item >RTSCTS</item>
+    </string-array>
+    
+</resources>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/btBtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/btname" />
+
+    <CheckBox
+        android:id="@+id/cbBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/etBtName"
+        android:layout_alignParentRight="true"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btBaudrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btBtName"
+        android:clickable="false"
+        android:text="@string/baudrate" />
+
+    <EditText
+        android:id="@+id/etBaudrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/btBaudrate"
+        android:layout_toRightOf="@+id/btBaudrate"
+        android:ems="10"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <CheckBox
+        android:id="@+id/cbBaudrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/btBaudrate" />
+
+    <Button
+        android:id="@+id/btLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btBaudrate"
+        android:text="@string/btlanguage" />
+
+    <EditText
+        android:id="@+id/etLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/etBaudrate"
+        android:layout_alignTop="@+id/btLanguage"
+        android:layout_toRightOf="@+id/btLanguage"
+        android:ems="10"
+        android:inputType="text" />
+
+    <CheckBox
+        android:id="@+id/cbLanguage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btLanguage"
+        android:layout_alignBottom="@+id/btLanguage"
+        android:layout_alignParentRight="true" 
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btConcertration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btLanguage"
+        android:text="@string/concertration" />
+
+    <EditText
+        android:id="@+id/etConcertration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/etLanguage"
+        android:layout_alignTop="@+id/btConcertration"
+        android:layout_toRightOf="@+id/btConcertration"
+        android:ems="10"
+        android:inputType="number" />
+
+    <CheckBox
+        android:id="@+id/cbConcertration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btConcertration"
+        android:layout_alignBottom="@+id/btConcertration"
+        android:layout_alignParentRight="true" 
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btDefaultfont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btConcertration"
+        android:text="@string/defaultfont" />
+
+    <EditText
+        android:id="@+id/etDefaultfont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/etConcertration"
+        android:layout_alignTop="@+id/btDefaultfont"
+        android:layout_toRightOf="@+id/btDefaultfont"
+        android:ems="10"
+        android:inputType="number" />
+
+    <CheckBox
+        android:id="@+id/cbDefaultfont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etDefaultfont"
+        android:layout_alignBottom="@+id/etDefaultfont"
+        android:layout_alignParentRight="true" 
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btLfcr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btDefaultfont"
+        android:text="@string/lfcr" />
+
+    <EditText
+        android:id="@+id/etLfcr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/etDefaultfont"
+        android:layout_alignTop="@+id/btLfcr"
+        android:layout_toRightOf="@+id/btLfcr"
+        android:ems="10"
+        android:inputType="text" />
+
+    <CheckBox
+        android:id="@+id/cbLfcr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etLfcr"
+        android:layout_alignBottom="@+id/etLfcr"
+        android:layout_alignParentRight="true" 
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btIdletime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btLfcr"
+        android:text="@string/idletime" />
+
+    <EditText
+        android:id="@+id/etIdletime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/etLfcr"
+        android:layout_alignTop="@+id/btIdletime"
+        android:layout_toRightOf="@+id/btIdletime"
+        android:ems="10"
+        android:inputType="number" />
+
+    <CheckBox
+        android:id="@+id/cbIdletime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etIdletime"
+        android:layout_alignBottom="@+id/etIdletime"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible"  />
+
+    <Button
+        android:id="@+id/btPwofftime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btIdletime"
+        android:text="@string/powerofftime" />
+
+    <EditText
+        android:id="@+id/etPwofftime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/etIdletime"
+        android:layout_alignTop="@+id/btPwofftime"
+        android:layout_toRightOf="@+id/btPwofftime"
+        android:ems="10"
+        android:inputType="number" />
+
+    <CheckBox
+        android:id="@+id/cbPwofftime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etPwofftime"
+        android:layout_alignBottom="@+id/etPwofftime"
+        android:layout_alignParentRight="true" 
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btMaxfeedlength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btPwofftime"
+        android:text="@string/maxfeedlength" />
+
+    <EditText
+        android:id="@+id/etMaxfeedlength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/etPwofftime"
+        android:layout_alignTop="@+id/btMaxfeedlength"
+        android:layout_toRightOf="@+id/btMaxfeedlength"
+        android:ems="10"
+        android:inputType="number" />
+
+    <CheckBox
+        android:id="@+id/cbMaxfeedlength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etMaxfeedlength"
+        android:layout_alignBottom="@+id/etMaxfeedlength"
+        android:layout_alignParentRight="true" 
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btBlackmarklength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btMaxfeedlength"
+        android:text="@string/blackmarklength" />
+
+    <EditText
+        android:id="@+id/etBlackmarklength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/etMaxfeedlength"
+        android:layout_alignTop="@+id/btBlackmarklength"
+        android:layout_toRightOf="@+id/btBlackmarklength"
+        android:ems="10"
+        android:inputType="number" />
+
+    <CheckBox
+        android:id="@+id/cbBlackmarklength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etBlackmarklength"
+        android:layout_alignBottom="@+id/etBlackmarklength"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/btsetparam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/etBtName"
+        android:text="@string/set" />
+
+    <EditText
+        android:id="@+id/etBtName"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btBtName"
+        android:layout_alignBottom="@+id/btBtName"
+        android:layout_toLeftOf="@+id/etpwd"
+        android:ems="10"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/etpwd"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/etBtName"
+        android:layout_alignBottom="@+id/etBtName"
+        android:layout_alignRight="@+id/etBaudrate"
+        android:ems="10"
+        android:inputType="textVisiblePassword" />
+
+</RelativeLayout>

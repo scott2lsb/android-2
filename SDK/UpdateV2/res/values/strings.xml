@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">updateV2</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="button1">Search</string>
+    <string name="button2">DisCon</string>
+    <string name="button3">TEST</string>
+    <string name="set">SET</string>
+    <string name="button4">UPDATE</string>
+    <string name="updateFirm">uFirm</string>
+    <string name="updateFont">uFont</string>
+    <string name="button5">Print</string>
+    <string name="testprint">TestPrint</string>
+    <string name="toggleButton1_on">Opened</string>
+    <string name="toggleButton1_off">Closed</string>
+    <string name="contentDescriptions"> ^_^ </string>
+    <string name="printesoft">Printer</string>
+    <string name="textview2">Picture</string>
+    <string name="textview3">Document</string>
+    <string name="textview4">Firm</string>
+    <string name="font">font</string>
+    <string name="textview5">Help</string>
+    <string name="help">"1.\tUpdate\n\tpress the menu Update，then will show a dialog to choose file.if no item in the dialog. please create a directory named printer in sdcard and put the firmware(*.bin) into here。
+        \n2.\tPicture\n\tthe picture in directory printer and DCIM will be show in list. press it can print.
+        \n3.\tText\n\t print text or send hex command</string>
+    <string name="btconnect">Connect</string>
+    <string name="btinput">Input</string>
+    <string name="btsms">Msm</string>
+    <string name="btcontact">Contact</string>
+    <string name="bttext">Text</string>
+    <string name="btpic">Pic</string>
+    <string name="btnet">Web</string>
+    <string name="maesusume">Go</string>
+    <string name="contentDescription">Loading</string>
+    <string name="print">PrintClipBoard</string>
+    <string name="ascii">Text</string>
+    <string name="hex">Hex</string>
+    <string name="btread">Read</string>
+    <string name="checkkey">CheckKey</string>
+    <string name="setkey">SetKey</string>
+    <string name="baudrate">"baud:" </string>
+    <string name="btname">"btname+pwd"</string>
+    <string name="btpwd">"btpwd: "</string>
+    <string name="btlanguage">"language"</string>
+    <string name="concertration">concertration</string>
+    <string name="defaultfont">defaultfont</string>
+    <string name="lfcr">"lf cr"</string>
+    <string name="idletime">idletime</string>
+    <string name="powerofftime">pw-off time</string>
+    <string name="maxfeedlength">maxfeedlen</string>
+    <string name="blackmarklength">maxblackmarklen</string>
+    <string name="selectbarcode">set barcode</string>
+    <string name="bar">Bar</string>
+    <string name="hintorgx">start position(0~65535)</string>
+    <string name="hintwidthx">width()2~6)</string>
+    <string name="hintheight">height(1~255)</string>
+    <string name="hintfonttype">font(0~standard 1~small)</string>
+    <string name="hintfontposition">font position(0~none 1~above 2~below 3~all)</string>
+    <string name="setqrcode">QRcode</string>
+    <string name="qr">QR</string>
+    <string name="btsaveparams">save params</string>
+    <string name="hintbtname">bluetooth name</string>
+    <string name="hintbtpassword">bluetooth password</string>
+    <string name="hintbaudrate">serial port baudrate</string>
+    <string name="hintlanguage">language</string>
+    <string name="hintdarkness">darkness</string>
+    <string name="hintdefaultfont">default font size</string>
+    <string name="hintlfcr">line feed ctl code</string>
+    <string name="hintidletime">idle time(s)</string>
+    <string name="hintpowerofftime">power-off time(s)</string>
+    <string name="hintmaxfeedlength">max feed length(mm)</string>
+    <string name="hintblackmarksearchlength">max blackmark search length(mm)</string>
+    <string name="UpdateFirm">UpdateFirm</string>
+    <string name="UpdateFont">UpdateFont</string>
+    <string name="SelectFont">SelectFont</string>
+    <string name="SelectFirm">SelectFirm</string>
+    <string name="SetParam">SetParam</string>
+    <string name="hintsystemname">system name</string>
+    <string name="hintsystemsn">system SN</string>
+    <string name="fontsize12x24">font size: 12x24</string>
+   
+
+</resources>

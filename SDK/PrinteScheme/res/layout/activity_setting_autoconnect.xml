@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayoutSettingAutoConnect"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RadioGroup
+        android:id="@+id/radioGroupAutoConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <RadioButton
+            android:id="@+id/radioSettingActiveConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/activeconnect" />
+
+        <RadioButton
+            android:id="@+id/radioSettingWaitConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/waitconnecting" />
+
+        <RadioButton
+            android:id="@+id/radioSettingNotSet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notset" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textViewSettingAutoConnectDevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioGroupAutoConnect"
+        android:hint="@string/hint_setting_autoconnect"
+        android:text="@string/blank"
+        android:textIsSelectable="false" />
+
+    <ListView
+        android:id="@+id/listViewSettingAutoConnect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewSettingAutoConnectDevice" >
+    </ListView>
+
+</RelativeLayout>

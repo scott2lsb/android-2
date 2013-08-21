@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">updateV2</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="button1">搜索设备</string>
+    <string name="button2">断开连接</string>
+    <string name="button3">TEST</string>
+    <string name="button4">UPDATE</string>
+    <string name="button5">打印</string>
+    <string name="testprint">测试打印</string>
+    <string name="toggleButton1_on">点击关闭</string>
+    <string name="toggleButton1_off">点击打开</string>
+    <string name="contentDescriptions"> ^_^ </string>
+    <string name="printesoft">打印软件</string>
+    <string name="textview2">打印图片</string>
+    <string name="textview3">打印文档</string>
+    <string name="textview4">升级程序</string>
+    <string name="textview5">帮助说明</string>
+    <string name="help">"1.\t关于升级程序和升级字库\n\t点击相应按钮即可弹出文件选择框，如果没有出现文件。请将升级程序(*.bin)放到sd卡/printer/program目录中，将字库文件(*.bin)放到sd卡/printer/font目录中。
+        \n2.\t关于打印图片\n\t可以选择放在printer目录下的图片和SD卡根目录下的DCIM目录下的图片进行打印。
+        \n3.\t关于打印文本\n\t输入文本，16进制数据或者打印文本文件。输入网址后，复制网页内容也可以打印。</string>
+    <string name="btconnect">连　接</string>
+    <string name="btinput">输　入</string>
+    <string name="btsms">短　信</string>
+    <string name="btcontact">联系人</string>
+    <string name="bttext">文　本</string>
+    <string name="btpic">图　片</string>
+    <string name="btnet">网　页</string>
+    <string name="maesusume">前进</string>
+    <string name="contentDescription">正在加载</string>
+    <string name="print">打印剪切板</string>
+    <string name="ascii">文本</string>
+    <string name="hex">命令</string>
+    <string name="btread">读取</string>
+    <string name="checkkey">效验</string>
+    <string name="setkey">密钥</string>
+    <string name="selectbarcode">选择条码</string>
+    <string name="hintorgx">起始位置(取值范围0~65535)</string>
+    <string name="hintwidthx">宽度(取值范围2~6)</string>
+    <string name="hintheight">高度(取值范围1~255)</string>
+    <string name="hintfonttype">字体(0~标准字体 1~压缩字体)</string>
+    <string name="hintfontposition">字体位置(0~不打印 1~上方 2~下方 3~上下)</string>
+    <string name="btsaveparams">保存</string>
+    <string name="hintbtname">蓝牙名称(12个字符以内)</string>
+    <string name="hintbtpassword">蓝牙密码(4个数字)</string>
+    <string name="hintbaudrate">串口波特率</string>
+    <string name="hintlanguage">代码页(语言)</string>
+    <string name="hintdarkness">打印浓度</string>
+    <string name="hintdefaultfont">默认字体</string>
+    <string name="hintlfcr">走纸标记</string>
+    <string name="hintidletime">空闲等待时间(s)</string>
+    <string name="hintpowerofftime">自动关机时间(s)</string>
+    <string name="hintmaxfeedlength">走纸键最大距离(mm)</string>
+    <string name="hintblackmarksearchlength">黑标最大寻找距离(mm)</string>
+    <string name="SetParam">设置参数</string>
+    <string name="font">选择字体</string>
+    <string name="UpdateFirm">升级程序</string>
+    <string name="UpdateFont">升级字库</string>
+    <string name="SelectFont">选择字库</string>
+    <string name="SelectFirm">选择程序</string>
+    <string name="hintsystemname">系统名称</string>
+    <string name="hintsystemsn">序列号</string>
+    <string name="fontsize12x24">字体大小: 12x24</string>
+
+</resources>

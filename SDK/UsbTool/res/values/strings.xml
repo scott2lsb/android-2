@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">USB升级工具</string>
+    <string name="action_settings">设置</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="enmurate">枚举设备</string>
+    <string name="connect">连接设备</string>
+    <string name="test">测试</string>
+    <string name="program">程序</string>
+    <string name="font">字体</string>
+
+</resources>

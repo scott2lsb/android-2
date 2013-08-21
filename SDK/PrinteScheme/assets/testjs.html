@@ -1,0 +1,23 @@
+<html>
+<script type="text/javascript">
+  function onAlert(){
+          alert("This is a alert sample from html");
+  }
+  function onConfirm(){
+          var b=confirm("are you sure to login?");
+          alert("your choice is "+b);
+  }
+  function onPrompt(){
+          var b=prompt("please input your password","aaa");
+          alert("your input is "+b);
+  }
+  
+</script>
+<pre>
+<input type="button" value="alert" onclick="onAlert()"/>
+<input type="button" value="confirm" onclick="onConfirm()"/>
+<input type="button" value="prompt" onclick="onPrompt()"/>
+</pre>
+<a href="javascript:window.print()">Window Print Page</a>
+<a href="javascript:window.close()">Close Window</a>
+</html>

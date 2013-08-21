@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_green_1"
+    android:keepScreenOn="true" >
+
+    <ScrollView
+        android:id="@+id/scrollViewPageList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp" >
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="70dp"
+                android:layout_height="5dp"
+                android:background="@drawable/fenge_normal"
+                android:textIsSelectable="false" />
+
+            <Button
+                android:id="@+id/btconnect"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="#00ffffff"
+                android:text="@string/btconnect"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="70dp"
+                android:layout_height="5dp"
+                android:background="@drawable/fenge_normal"
+                android:textIsSelectable="false" />
+
+            <Button
+                android:id="@+id/btinput"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="#00ffffff"
+                android:text="@string/btinput"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="70sp"
+                android:layout_height="5dp"
+                android:background="@drawable/fenge_normal"
+                android:textIsSelectable="false" />
+
+            <Button
+                android:id="@+id/btsms"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="#00ffffff"
+                android:text="@string/btsms"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="70dp"
+                android:layout_height="5dp"
+                android:background="@drawable/fenge_normal"
+                android:textIsSelectable="false" />
+
+            <Button
+                android:id="@+id/btcontact"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="#00ffffff"
+                android:text="@string/btcontact"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="70dp"
+                android:layout_height="5dp"
+                android:background="@drawable/fenge_normal"
+                android:textIsSelectable="false" />
+
+            <Button
+                android:id="@+id/bttext"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="#00ffffff"
+                android:text="@string/bttext"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="70dp"
+                android:layout_height="5dp"
+                android:background="@drawable/fenge_normal"
+                android:textIsSelectable="false" />
+
+            <Button
+                android:id="@+id/btnet"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:background="#00ffffff"
+                android:text="@string/btnet"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="70dp"
+                android:layout_height="5dp"
+                android:background="@drawable/fenge_normal"
+                android:textIsSelectable="false" />
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/frameLayoutWithTwoLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/scrollViewPageList"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/scrollViewPageList"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btsearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_style_2"
+                    android:text="@string/button1"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btdisconnect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_style_2"
+                    android:text="@string/button2"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/scrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutDevice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout02"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+
+            <ListView
+                android:id="@+id/listView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout05"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+
+            <ListView
+                android:id="@+id/listView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout06"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+
+            <ListView
+                android:id="@+id/listView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout03"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+
+            <!-- WebView中设置字体大小，并设置WebView大小，使其一行能够显示32个字符这样才行 -->
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout01"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" >
+
+                <Button
+                    android:id="@+id/btweb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/maesusume" />
+
+                <EditText
+                    android:id="@+id/etweb"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@id/btweb"
+                    android:layout_toStartOf="@id/btweb"
+                    android:inputType="textWebEditText" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp" >
+
+                <WebView
+                    android:id="@+id/webView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/btprint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/print"
+                    android:visibility="visible" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout04"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp" >
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutkey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/radioGroupAsciiOrHex"
+                    android:layout_toLeftOf="@+id/radioGroupAsciiOrHex"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btsetkey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/setkey" />
+
+                    <Button
+                        android:id="@+id/btcheckkey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/checkkey" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutprint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/linearLayoutkey"
+                    android:layout_toLeftOf="@+id/radioGroupAsciiOrHex"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btread"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/btread" />
+
+                    <Button
+                        android:id="@+id/bttextprint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/button5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:id="@+id/linearLayoutbtbarcode"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/linearLayoutprint"
+                    android:layout_toLeftOf="@+id/radioGroupAsciiOrHex"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btbarcode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:text="@string/selectbarcode" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/radioGroupAsciiOrHex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="170dp"
+                    android:layout_alignParentRight="true"
+                    android:padding="5dp" >
+
+                    <RadioButton
+                        android:id="@+id/radioAscii"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:checked="true"
+                        android:text="@string/ascii" />
+
+                    <RadioButton
+                        android:id="@+id/radioHex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="@string/hex" />
+
+                    <RadioButton
+                        android:id="@+id/radioBarcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="@string/bar" />
+
+                    <RadioButton
+                        android:id="@+id/radioQRcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:text="@string/qr" />
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/buttonFontSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/linearLayoutbtbarcode"
+                    android:layout_below="@+id/linearLayoutbtbarcode"
+                    android:text="@string/fontsize12x24" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="5dp" >
+
+                <!-- <requestFocus /> -->
+
+                <TextView
+                    android:id="@+id/tvread"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:text=""
+                    android:textIsSelectable="true" />
+
+                <EditText
+                    android:id="@+id/ettextprint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvread"
+                    android:inputType="textMultiLine" >
+                </EditText>
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/scrollView1"
+        android:layout_alignRight="@id/scrollView1"
+        android:layout_below="@+id/scrollViewPageList"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/textViewInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/progressBar1"
+        android:layout_below="@+id/progressBar1"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textIsSelectable="false" />
+
+</RelativeLayout>

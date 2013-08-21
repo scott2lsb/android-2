@@ -1,0 +1,9 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textView1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tv_style_1"
+    android:clickable="false"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:textIsSelectable="false"
+     />

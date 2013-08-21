@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutPrint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/buttonPrint"
+            android:layout_alignParentLeft="true"
+            android:text="@string/barcode" />
+
+        <Button
+            android:id="@+id/buttonPrint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/print" />
+
+        <EditText
+            android:id="@+id/editTextBarcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/buttonPrint"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="80dp"
+            android:layout_toLeftOf="@+id/buttonPrint"
+            android:ems="10"
+            android:inputType="text"
+            android:maxLines="1" >
+
+            <requestFocus />
+        </EditText>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayoutPrint"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/buttonBarcodetype"
+                android:text="@string/barcodetype" />
+
+            <Button
+                android:id="@+id/buttonBarcodetype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="80dp"
+                android:gravity="left|center_vertical" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/buttonStartOrgx"
+                android:text="@string/startorgx" />
+
+            <Button
+                android:id="@+id/buttonStartOrgx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="80dp"
+                android:gravity="left|center_vertical" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/buttonBarcodeWidth"
+                android:text="@string/barcodewidth" />
+
+            <Button
+                android:id="@+id/buttonBarcodeWidth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="80dp"
+                android:gravity="left|center_vertical" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/buttonBarcodeHeight"
+                android:text="@string/barcodeheight" />
+
+            <Button
+                android:id="@+id/buttonBarcodeHeight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="80dp"
+                android:gravity="left|center_vertical" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/buttonBarcodeFontType"
+                android:text="@string/barcodefonttype" />
+
+            <Button
+                android:id="@+id/buttonBarcodeFontType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="80dp"
+                android:gravity="left|center_vertical" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/buttonBarcodeFontPosition"
+                android:text="@string/barcodefontposition" />
+
+            <Button
+                android:id="@+id/buttonBarcodeFontPosition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="80dp"
+                android:gravity="left|center_vertical" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
