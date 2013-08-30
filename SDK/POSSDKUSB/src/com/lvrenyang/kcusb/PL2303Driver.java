@@ -120,6 +120,7 @@ public class PL2303Driver {
 	public void startRead() {
 		if (null == readthread)
 			readthread = new ReadThread(this);
+		readthread.quit = false;
 		readthread.start();
 	}
 
@@ -161,7 +162,7 @@ public class PL2303Driver {
 		}
 		if (null == mUsbInterface)
 			return false;
-		if ((null == mUsbEndpointOut) && (null == mUsbEndpointIn))
+		if ((null == mUsbEndpointOut) || (null == mUsbEndpointIn))
 			return false;
 		mUsbDeviceConnection = mUsbManager.openDevice(mUsbDevice);
 		if (null == mUsbDeviceConnection)
@@ -606,6 +607,23 @@ public class PL2303Driver {
 		POS_Write(data);
 	}
 
+	/**
+	 * 设置打印区域宽度
+	 * 
+	 * @param nWidth
+	 */
+	public void POS_S_SetAreaWidth(int nWidth) {
+		if (nWidth < 0 | nWidth > 65535)
+			return;
+
+		byte nL = (byte) (nWidth % 0x100);
+		byte nH = (byte) (nWidth / 0x100);
+		Cmd.ESCCmd.GS_W_nL_nH[2] = nL;
+		Cmd.ESCCmd.GS_W_nL_nH[3] = nH;
+		byte[] data = Cmd.ESCCmd.GS_W_nL_nH;
+		POS_Write(data);
+	}
+	
 	public void POS_SetLineHeight(int nHeight) {
 		if (nHeight < 0 || nHeight > 255)
 			return;
@@ -613,7 +631,7 @@ public class PL2303Driver {
 		data[2] = (byte) nHeight;
 		POS_Write(data);
 	}
-
+	
 	public void POS_S_SetBarcode(String strCodedata, int nOrgx, int nType,
 			int nWidthX, int nHeight, int nHriFontType, int nHriFontPosition) {
 		if (nOrgx < 0 | nOrgx > 65535 | nType < 0x41 | nType > 0x49
@@ -671,6 +689,76 @@ public class PL2303Driver {
 
 	}
 
+	/**
+	 * 设置字符集和代码页
+	 * 
+	 * @param nCharSet
+	 * @param nCodePage
+	 */
+	public void POS_SetCharSetAndCodePage(int nCharSet, int nCodePage) {
+		if (nCharSet < 0 | nCharSet > 15 | nCodePage < 0 | nCodePage > 19
+				| (nCodePage > 10 & nCodePage < 16))
+			return;
+
+		Cmd.ESCCmd.ESC_R_n[2] = (byte) nCharSet;
+		Cmd.ESCCmd.ESC_t_n[2] = (byte) nCodePage;
+		POS_Write(Cmd.ESCCmd.ESC_R_n);
+		POS_Write(Cmd.ESCCmd.ESC_t_n);
+	}
+	
+	/**
+	 * 设置移动单位
+	 * 
+	 * @param nHorizontalMU
+	 * @param nVerticalMU
+	 */
+	public void POS_SetMotionUnit(int nHorizontalMU, int nVerticalMU) {
+		if (nHorizontalMU < 0 || nHorizontalMU > 255 || nVerticalMU < 0
+				|| nVerticalMU > 255)
+			return;
+
+		byte[] data = Cmd.ESCCmd.GS_P_x_y;
+		data[2] = (byte) nHorizontalMU;
+		data[3] = (byte) nVerticalMU;
+		POS_Write(data);
+	}
+	
+	/**
+	 * 设置字符右间距
+	 * 
+	 * @param nDistance
+	 */
+	public void POS_SetRightSpacing(int nDistance) {
+		if (nDistance < 0 | nDistance > 255)
+			return;
+
+		Cmd.ESCCmd.ESC_SP_n[2] = (byte) nDistance;
+		byte[] data = Cmd.ESCCmd.ESC_SP_n;
+		POS_Write(data);
+	}
+	
+	// 暂时先这样，可以用request，验证返回数据
+	public void POS_SetSystemInfo(String name, String sn) {
+		if ((name == null) || (sn == null))
+			return;
+
+		byte[] bname = name.getBytes();
+		byte[] bsn = sn.getBytes();
+
+		if (bname.length > Cmd.Constant.FAC_MAX_NAME_LEN
+				|| bsn.length > Cmd.Constant.FAC_MAX_SN_LEN)
+			return;
+		int nlength = bname.length + bsn.length + 2;
+		byte[] zero = { 0 };
+		byte[] data = DataUtils.byteArraysToBytes(new byte[][] {
+				Cmd.PCmd.setSystemInfo, bname, zero, bsn, zero });
+		data[8] = (byte) (nlength & 0xff);
+		data[9] = (byte) ((nlength & 0xff00) >> 8);
+		data[10] = DataUtils.bytesToXor(data, 0, 10);
+		data[11] = DataUtils.bytesToXor(data, 12, nlength);
+		POS_Write(data);
+	}
+	
 	public void debug(String msg) {
 		if (!debug)
 			return;

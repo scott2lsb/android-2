@@ -39,18 +39,18 @@ public class MainActivity extends Activity implements OnClickListener {
 
 	private static final String ACTION_USB_PERMISSION = "com.lvrenyang.usbtool.PL2303Driver.USB_PERMISSION";
 
-	private TextView textView1;
-	private CheckBox checkBoxTest, checkBoxProgram, checkBoxFont;
-	private Button buttonTest, buttonProgram, buttonFont;
+	private static TextView textView1;
+	private static CheckBox checkBoxTest, checkBoxProgram, checkBoxFont;
+	private static Button buttonTest, buttonProgram, buttonFont;
 	private static ProgressBar progressBar1;
 	private static PL2303Driver mSerial;
-	private BroadcastReceiver broadcastReceiver;
+	private static BroadcastReceiver broadcastReceiver;
 	private static byte[] data58bin = null;
 	private static byte[] database9x24bin = null;
 	private static byte[] dataencry9x24bin = null;
 	public static String programfile = null;
 	public static String fontfile = null;
-	private boolean debug_main = false;
+	private static boolean debug_main = false;
 
 	private static Intent startProgramOptionActivityIntent = null;
 	private static Intent startFontOptionActivityIntent = null;
@@ -108,12 +108,12 @@ public class MainActivity extends Activity implements OnClickListener {
 			e.printStackTrace();
 		}
 		mContext = this;
-		initBroadcast();
 		new UpdateProgram().start();
 		mSerial = new PL2303Driver(
 				(UsbManager) getSystemService(Context.USB_SERVICE), this,
 				ACTION_USB_PERMISSION);
 		mSerial.startRead();
+		initBroadcast();
 		handleIntent();
 		debug_toast("onCreate");
 	}
@@ -160,14 +160,13 @@ public class MainActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-
+		uninitBroadcast();
 		disconnected = true;
 		Message msg = UpdateProgram.updateHandler.obtainMessage();
 		msg.what = UpdateProgram.WHAT_QUIT;
 		UpdateProgram.updateHandler.sendMessageAtFrontOfQueue(msg);
 
 		mSerial.endRead();
-		uninitBroadcast();
 	}
 
 	@Override
@@ -273,8 +272,8 @@ public class MainActivity extends Activity implements OnClickListener {
 				if (startProgramOptionActivityIntent != null)
 					startActivity(startProgramOptionActivityIntent);
 			}
-		}
 			break;
+		}
 
 		case R.id.checkBoxFont: {
 			if (checkBoxFont.isChecked()) {
@@ -282,27 +281,30 @@ public class MainActivity extends Activity implements OnClickListener {
 				if (startFontOptionActivityIntent != null)
 					startActivity(startFontOptionActivityIntent);
 			}
-		}
 			break;
+		}
 
 		case R.id.buttonTest: {
 			printTest();
-		}
 			break;
+		}
 
 		case R.id.buttonProgram: {
 			if (checkBoxProgram.isChecked())
 				updateprogram();
-		}
+
 			break;
+		}
+
 		case R.id.buttonFont: {
 
 			// if (checkBoxFont.isChecked())
 			// updatefont();
 
 			updatesmallfont();
-		}
 			break;
+		}
+
 		}
 	}
 
@@ -328,6 +330,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		}
 		if (null == data58bin) {
 			Toast.makeText(this, "∂¡»° ß∞‹", Toast.LENGTH_SHORT).show();
+			return;
 		}
 		if (disconnected)
 			return;
@@ -399,6 +402,7 @@ public class MainActivity extends Activity implements OnClickListener {
 		}
 		if (null == database9x24bin || null == dataencry9x24bin) {
 			Toast.makeText(this, "∂¡»° ß∞‹", Toast.LENGTH_SHORT).show();
+			return;
 		}
 		if (disconnected)
 			return;
@@ -945,6 +949,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 			break;
 		}
+
 		}
 		return false;
 	}
