@@ -314,7 +314,6 @@ public class MainActivity extends Activity implements OnClickListener {
 			finish();
 		}
 		return false;
-
 	}
 
 	private void printTest() {

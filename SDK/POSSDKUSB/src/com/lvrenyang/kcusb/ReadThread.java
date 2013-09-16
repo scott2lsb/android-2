@@ -2,6 +2,7 @@ package com.lvrenyang.kcusb;
 
 public class ReadThread extends Thread {
 
+	/* ReadThread看来还是要弄到别的地方才行啊。SDK不能做太死，要给人家自由 */
 	public static final String DEBUG = "com.lvrenyang.usbtool.debug";
 	public static final String EXTRA_DEBUG = "com.lvrenyang.usbtool.extra_debug";
 	public static final Object lock = new Object();

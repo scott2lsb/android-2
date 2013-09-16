@@ -269,7 +269,7 @@ public class PL2303Driver {
 	@SuppressWarnings("unused")
 	private static final int UART_CTS = 0x80;
 
-	private pl2303_type type = pl2303_type.HX;
+	private pl2303_type type;
 	private byte[] termios = new byte[] { (byte) 0x80, 0x25, 0x0, 0x0, 0x0,
 			0x0, 0x8 };
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">POSSDKSample</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="connect">连接</string>
+    <string name="disconnect">断开</string>
+    <string name="testtext">测试文本</string>
+    <string name="testbarcode">测试条码</string>
+    <string name="testqrcode">测试二维码</string>
+    <string name="testpic">测试图片</string>
+
+</resources>

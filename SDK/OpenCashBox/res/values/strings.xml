@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">OpenCashBox</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="connect">连接</string>
+    <string name="disconnect">断开</string>
+    <string name="baudrate">波特率</string>
+    <string name="readtest">读测试</string>
+    <string name="writetest">写测试</string>
+    <string name="test">测试</string>
+    <string name="program">程序</string>
+    <string name="font">字体</string>
+    <string name="smallfont">小字体</string>
+    <string name="setupdatebaudrate">设置升级程序波特率</string>
+    <string name="auto">自动</string>
+    <string name="autostart">连上后自动执行</string>
+
+</resources>
